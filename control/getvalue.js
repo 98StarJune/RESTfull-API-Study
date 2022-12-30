@@ -1,3 +1,5 @@
+
+//  backend/getdata  : Get
 exports.getvalue = ((req, res, next) =>{
-    const
+    const obj = value
 })
