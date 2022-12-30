@@ -3,7 +3,7 @@ const Content = require('../class/content')
 exports.addvalue = (req, res, next) => {
     const first = req.body.division.first;
     const second = req.body.division.second;
-    const moeny = req.body.money;
+    const money = req.body.money;
     const time = req.body.time;
     const memo = req.body.memo;
 
@@ -12,10 +12,11 @@ exports.addvalue = (req, res, next) => {
             first: first,
             second: second
         },
-        moeny: moeny,
+        money: money,
         time: time,
         memo: memo
     })
+    console.log(value)
 
     value.save()
         .then(resault =>{
@@ -25,9 +26,8 @@ exports.addvalue = (req, res, next) => {
             })
         })
         .catch(err=>{
-            console.log(err);
             res.status(400).json({
-                message: "Error",
+                message: "Error at addvalue",
                 error: err
             })
         })

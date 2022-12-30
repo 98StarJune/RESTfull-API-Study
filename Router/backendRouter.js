@@ -3,7 +3,7 @@ const {getvalue} = require("../control/getvalue");
 const {addvalue} = require("../control/addvalue");
 const router = express.Router();
 
-router.get('/getdata', getvalue);
+router.get('/get', getvalue);
 router.post('/add', addvalue);
 
 module.exports = router;
