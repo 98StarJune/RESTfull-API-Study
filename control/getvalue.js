@@ -8,14 +8,9 @@ exports.getvalue = ((req, res, next) =>{
       })
       .catch(err=>{
           console.log(err);
-          res.status(400).json({
+          res.status(500).json({
               message : "Error at getvalue",
               error : err
           })
       })
 })
-/*
-const temp = Content.find()
-    console.log(temp);
-    res.status(200).json(temp);
-*/

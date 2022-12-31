@@ -40,20 +40,20 @@ module.exports.join = (req, res, next) => {
                     })
                     .catch(err => {
                         console.log(err);
-                        res.status(400).json({
+                        res.status(500).json({
                             message: "save failed"
                         })
                     })
             })
             .catch(err => {
                 console.log(err);
-                res.status(400).json({
+                res.status(500).json({
                     message: "error",
                 })
             })
     }).catch(err=>{
         console.log(err);
-        res.status(400).json({
+        res.status(500).json({
             message : "hash fail"
         })
     })

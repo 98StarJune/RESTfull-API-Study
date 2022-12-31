@@ -26,7 +26,7 @@ exports.addvalue = (req, res, next) => {
             })
         })
         .catch(err=>{
-            res.status(400).json({
+            res.status(500).json({
                 message: "Error at addvalue",
                 error: err
             })
