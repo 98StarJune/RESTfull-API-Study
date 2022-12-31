@@ -45,12 +45,12 @@ module.exports.changePW = (req, res, next) =>{
                     user.save()
                         .then(()=> {
                             res.status(201).json({
-                                message: "Change Success"
+                                message: "Change Success",
                             })
                         })
                         .catch(err=>{
                             res.status(400).json({
-                                message: "faile to save"
+                                message: "fail to save"
                             })
                         })
                 })

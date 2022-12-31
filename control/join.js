@@ -18,7 +18,7 @@ module.exports.join = (req, res, next) => {
     const phone = req.body.phone;
     const email = req.body.email;
 
-    bcrypt.hash(pw, 12).then(hashpw=>{
+    bcrypt.hash(pw, 12).then(hashpw  =>{
         user.findOne({id: id})
             .then(userinfo => {
                 if (userinfo) {
