@@ -5,6 +5,7 @@ const {join} = require('../control/join')
 const {finduser, changePW} = require('../control/find')
 const {body} = require("express-validator/check");
 const {signout} = require('../control/signout');
+const {login} = require('../control/longin');
 
 // /auth/join
 
@@ -15,6 +16,7 @@ router.post('/join', [
 ], join);
 
 router.post('/signout', signout);
+router.post('/login', login);
 
 router.post('/find', [
     body('id').exists().withMessage("fail : id"),
