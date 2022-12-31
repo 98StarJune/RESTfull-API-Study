@@ -61,7 +61,7 @@ module.exports.changePW = (req, res, next) =>{
                 })
         })
         .catch(err=>{
-            res.status(400).json({
+            res.status(500).json({
                 message : "bcrypt error at changepw"
             })
         })
