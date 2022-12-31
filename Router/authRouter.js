@@ -7,6 +7,7 @@ const {body} = require("express-validator/check");
 const {signout} = require('../control/signout');
 const {login} = require('../control/longin');
 
+
 // /auth/join
 
 router.post('/join', [

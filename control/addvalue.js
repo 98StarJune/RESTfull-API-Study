@@ -1,20 +1,15 @@
 const Content = require('../class/content')
 //  /backend/add/ : Post
 exports.addvalue = (req, res, next) => {
-    const first = req.body.division.first;
-    const second = req.body.division.second;
-    const money = req.body.money;
-    const time = req.body.time;
-    const memo = req.body.memo;
-
     const value = new Content({
         division: {
-            first: first,
-            second: second
+            first: req.body.division.first,
+            second: req.body.division.second
         },
-        money: money,
-        time: time,
-        memo: memo
+        money: req.body.money,
+        time: req.body.time,
+        memo: req.body.memo,
+        id: req.userId
     })
     console.log(value)
 

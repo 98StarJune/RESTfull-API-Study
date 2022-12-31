@@ -18,7 +18,9 @@ module.exports.login = (req, res, next) => {
                     if (!resault) {
                         return res.status(401).json({message: "Password not correct"})
                     }
-                    const token = jwt.sign({id: user.id},
+                    const token = jwt.sign({
+                            id: user._id.toString()
+                        },
                         'scretcode#test',
                         {expiresIn: '10m'});
                     res.status(200).json({token: token});

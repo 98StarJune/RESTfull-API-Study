@@ -24,11 +24,10 @@ const contentSchema = new Schema({
         type: String,
         required: true
     },
-    /*
-    _id: {
+    id: {
         type: String,
         required: true
-    }*/
+    }
 })
 
 module.exports = mongoose.model('Content', contentSchema);
