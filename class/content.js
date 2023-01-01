@@ -21,8 +21,7 @@ const contentSchema = new Schema({
         required: true
     },
     memo: {
-        type: String,
-        required: true
+        type: String
     },
     id: {
         type: String,

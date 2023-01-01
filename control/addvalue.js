@@ -11,11 +11,8 @@ exports.addvalue = (req, res, next) => {
         memo: req.body.memo,
         id: req.userId
     })
-    console.log(value)
-
     value.save()
         .then(resault =>{
-            console.log('Data Saved.');
             res.status(200).json({
                 message : "Data Saved"
             })
@@ -23,7 +20,6 @@ exports.addvalue = (req, res, next) => {
         .catch(err=>{
             res.status(500).json({
                 message: "Error at addvalue",
-                error: err
             })
         })
 }
