@@ -21,14 +21,12 @@ const contentSchema = new Schema({
         required: true
     },
     memo: {
-        type: String,
-        required: true
+        type: String
     },
-    /*
-    _id: {
+    id: {
         type: String,
         required: true
-    }*/
+    }
 })
 
 module.exports = mongoose.model('Content', contentSchema);
